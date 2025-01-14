@@ -1,4 +1,4 @@
-package com.tomorrow.weather.data.local.entity
+package com.tomorrow.weather.data.local
 
 // Main Weather Data Grouping for UI
 data class WeatherForecast(

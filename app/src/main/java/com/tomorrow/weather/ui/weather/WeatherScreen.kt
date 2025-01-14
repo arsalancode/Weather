@@ -40,7 +40,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.tomorrow.weather.R
-import com.tomorrow.weather.data.local.entity.WeatherForecast
+import com.tomorrow.weather.data.local.WeatherForecast
 import com.tomorrow.weather.ui.weather.component.NextDaysComponent
 import com.tomorrow.weather.ui.weather.component.TodayComponent
 import com.tomorrow.weather.ui.weather.component.WeatherImage

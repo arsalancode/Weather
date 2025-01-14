@@ -13,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.tomorrow.weather.data.local.entity.NextDaysWeather
+import com.tomorrow.weather.data.local.NextDaysWeather
 import com.tomorrow.weather.utils.getDayName
 
 @Composable
