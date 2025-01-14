@@ -1,6 +1,6 @@
 package com.tomorrow.weather.ui.weather.state
 
-import com.tomorrow.weather.data.local.entity.WeatherForecast
+import com.tomorrow.weather.data.local.WeatherForecast
 
 sealed interface WeatherUiState {
     val isLoading: Boolean

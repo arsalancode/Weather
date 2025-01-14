@@ -13,7 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.tomorrow.weather.R
-import com.tomorrow.weather.data.local.entity.TodayWeather
+import com.tomorrow.weather.data.local.TodayWeather
 
 @Composable
 fun TodayComponent(

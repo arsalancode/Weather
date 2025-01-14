@@ -32,14 +32,39 @@ To fetch the weather for a specific location, you can use the following API endp
 https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current_weather=true
 
 
-## 📐✏️ Architecture
+## Architecture
 
-The app follows the Model-View-ViewModel (MVVM) architecture with a Repository pattern to separate the user interface, logic, and data management.
+The app is designed using a combination of **Clean Architecture** and the **Model-View-ViewModel (MVVM)** pattern to ensure modularity, scalability, and maintainability.
 
-- **Model**: Represents the data and business logic of the app. It deals with actual data sources like the weather data fetched from the Open-meteo API.
-- **View**: Represents the UI of the app. It is built using Jetpack Compose and displays the weather information to the user.
-- **ViewModel**: Holds and manages the data required by the View. It exposes data to the UI using `StateFlow`.
-- **Repository**: Serves as an intermediary between the ViewModel and data sources. It abstracts data fetching, whether from the Open-meteo API or other sources, allowing the ViewModel to focus on business logic rather than data retrieval details.
+### Key Layers:
+
+1. **Data Layer**:
+  - Responsible for data retrieval and storage.
+  - Includes:
+    - **Local**: Manages locally stored data (e.g., caching).
+    - **Remote**: Handles API calls via `WeatherApi` and `RemoteWeatherRepositoryImpl`.
+  - **Repository**: Acts as a single source of truth by mediating between local and remote data sources.
+
+2. **Domain Layer**:
+  - Contains the core business logic and is independent of external frameworks.
+  - Includes:
+    - **Use Cases**: Encapsulate application-specific operations (e.g., `GetWeatherInfoUseCase`).
+    - **Repository Interface**: Abstracts data access, enabling easy switching or extension of data sources.
+
+3. **Presentation Layer (UI)**:
+  - Handles user interaction and displays data.
+  - Built using **Jetpack Compose** for a reactive and modern UI.
+  - Includes:
+    - **ViewModel**: Manages UI state and interacts with the Domain Layer.
+    - **Composable Components**: Render UI based on the current state from the ViewModel.
+
+### Combined Benefits of Clean Architecture and MVVM:
+- **Separation of Concerns**: Each layer has a distinct responsibility, making the code easier to understand and maintain.
+- **Scalability**: The modular structure allows for seamless feature addition.
+- **Testability**: The Domain Layer and ViewModel can be independently tested without reliance on the UI or data sources.
+- **Maintainability**: Decoupled layers ensure that changes in one part of the app have minimal impact on others.
+
+This architecture enables the app to remain robust, flexible, and adaptable to future changes or enhancements.
 
 ### Flow:
 1. The user opens the app and sees the weather data for the current location.
@@ -47,8 +72,6 @@ The app follows the Model-View-ViewModel (MVVM) architecture with a Repository p
 3. The Repository handles fetching data from the API.
 4. The ViewModel updates the UI with the weather information for each location.
 5. If there is no internet, the app will display an error and gives option to retry.
-
-This architecture ensures scalability and maintainability by decoupling the UI from the data and business logic.
 
 ## 🛠 Tech Stack
 

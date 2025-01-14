@@ -1,6 +1,6 @@
 package com.tomorrow.weather.domain.usecase
 
-import com.tomorrow.weather.data.local.entity.WeatherForecast
+import com.tomorrow.weather.data.local.WeatherForecast
 import com.tomorrow.weather.domain.mapper.toWeatherForecast
 import com.tomorrow.weather.domain.repository.RemoteWeatherRepository
 import com.tomorrow.weather.utils.isNoInternetException

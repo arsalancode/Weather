@@ -1,10 +1,10 @@
 package com.tomorrow.weather.domain.mapper
 
-import com.tomorrow.weather.data.local.entity.CurrentWeather
-import com.tomorrow.weather.data.local.entity.HourlyForecast
-import com.tomorrow.weather.data.local.entity.NextDaysWeather
-import com.tomorrow.weather.data.local.entity.TodayWeather
-import com.tomorrow.weather.data.local.entity.WeatherForecast
+import com.tomorrow.weather.data.local.CurrentWeather
+import com.tomorrow.weather.data.local.HourlyForecast
+import com.tomorrow.weather.data.local.NextDaysWeather
+import com.tomorrow.weather.data.local.TodayWeather
+import com.tomorrow.weather.data.local.WeatherForecast
 import com.tomorrow.weather.data.remote.model.DTOWeatherResponse
 import java.text.SimpleDateFormat
 import java.util.Date
