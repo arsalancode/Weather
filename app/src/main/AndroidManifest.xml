@@ -8,8 +8,6 @@
     <application
         android:name=".app.WeatherApplication"
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/ic_app_icon"
         android:label="@string/app_name"
         android:usesCleartextTraffic="true"
