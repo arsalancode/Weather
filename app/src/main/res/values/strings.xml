@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <string name="about_screen_title">About</string>
+    <string name="home_screen_title">Weather</string>
+    <string name="cd_open_navigation_drawer">Open navigation drawer</string>
+
+    <string name="today">Today</string>
+    <string name="forecast">Forecast</string>
+    <string name="retry">Retry</string>
+    <string name="weather_info">%1$s°C / %2$s°C Feels like %3$s°C</string>
+    <string name="loading">Loading…</string>"
+
+    <string name="error_no_internet">No Internet Connection</string>
+    <string name="error_unknown">Unknown Error</string>
+
+
+</resources>
